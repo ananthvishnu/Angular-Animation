@@ -1,0 +1,9 @@
+@import '../../../styles.css';
+
+.text-primary {
+    color: var(--primary);
+}
+
+.border-btn{
+    border:1px solid var(--primary);
+}
