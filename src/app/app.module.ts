@@ -20,6 +20,18 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ServicesPageComponent } from './pages/services-page/services-page.component';
+import { MenuPageComponent } from './pages/menu-page/menu-page.component';
+import { EventsPageComponent } from './pages/events-page/events-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
+
+import { BookingPageComponent } from './pages/booking-page/booking-page.component';
+import { BlogPageComponent } from './pages/blog-page/blog-page.component';
+import { TeamPageComponent } from './pages/team-page/team-page.component';
+import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +47,17 @@ import { FooterComponent } from './components/footer/footer.component';
     TeamComponent,
     TestimonialComponent,
     BlogsComponent,
-    FooterComponent
+    FooterComponent,
+    AboutPageComponent,
+    ServicesPageComponent,
+    MenuPageComponent,
+    EventsPageComponent,
+    ContactPageComponent,
+    ErrorPageComponent,
+    BookingPageComponent,
+    BlogPageComponent,
+    TeamPageComponent,
+    TestimonialPageComponent
   ],
   imports: [
     BrowserModule,
