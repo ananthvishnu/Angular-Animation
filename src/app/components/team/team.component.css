@@ -1,0 +1,57 @@
+@import "../../../styles.css";
+
+.team-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.team-item .team-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.team-item .team-icon .share-link {
+  opacity: 0;
+  transition: 0.9s;
+}
+
+.team-item:hover .share-link {
+  opacity: 1;
+}
+
+.team-item .team-content {
+  transition: 0.9s;
+}
+
+.team-item:hover .team-content {
+  background: var(--primary) !important;
+  color: var(--dark) !important;
+}
+
+.team-item .team-content h4,
+.team-item .team-content p {
+  transition: 0.5s;
+}
+
+.team-item:hover .team-content h4 {
+  color: var(--dark) !important;
+}
+
+.team-item:hover .team-content p {
+  color: var(--white);
+}
+
+.border-btn {
+  border: 1px solid var(--primary);
+}
+.open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+p {
+    font-family: "Open Sans", sans-serif !important;
+    color: #9a9a9a;
+  }
+  

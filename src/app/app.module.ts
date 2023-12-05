@@ -14,6 +14,11 @@ import { FactComponent } from './components/fact/fact.component';
 import { ServiceComponent } from './components/service/service.component';
 import { EventsComponent } from './components/events/events.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { BookUsComponent } from './components/book-us/book-us.component';
+import { TeamComponent } from './components/team/team.component';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { MenuComponent } from './components/menu/menu.component';
     FactComponent,
     ServiceComponent,
     EventsComponent,
-    MenuComponent
+    MenuComponent,
+    BookUsComponent,
+    TeamComponent,
+    TestimonialComponent,
+    BlogsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

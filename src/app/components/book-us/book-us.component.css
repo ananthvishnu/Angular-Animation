@@ -1,0 +1,26 @@
+@import "../../../styles.css";
+
+.border-btn {
+  border: 1px solid var(--primary);
+}
+.open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+select {
+  font-family: "Open Sans", sans-serif !important;
+  color: #9a9a9a;
+}
+
+.form-control {
+  font-family: "Open Sans", sans-serif !important;
+  color: #9a9a9a;
+}
+
+.border-primary {
+  border: 1px solid var(--primary) !important;
+}

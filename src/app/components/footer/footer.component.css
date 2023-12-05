@@ -1,0 +1,21 @@
+@import "../../../styles.css";
+
+.footer .footer-item a.text-body:hover {
+  color: var(--primary) !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.border-btn {
+  border: 1px solid var(--primary);
+}
+
+.border-bottom {
+  color: var(--primary) !important;
+}
+
+.site-name {
+  color: var(--primary);
+}

@@ -1,0 +1,16 @@
+
+@import "../../../styles.css";
+
+.testimonial-item {
+    border: 1px solid var(--primary);
+    padding: 20px 20px;
+}
+
+.testimonial-carousel .owl-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.testimonial-carousel.owl-rtl .testimonial-item {
+    direction: ltr !important;
+}
