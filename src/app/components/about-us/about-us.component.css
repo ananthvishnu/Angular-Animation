@@ -1,0 +1,18 @@
+@import "../../../styles.css";
+
+.text-primary {
+  color: var(--primary);
+}
+
+.about-row {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.border-btn {
+  border: 1px solid var(--primary);
+}
+
+p {
+  font-family: "Open Sans", sans-serif !important;
+  color: #9a9a9a;
+}

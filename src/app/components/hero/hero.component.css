@@ -1,9 +1,14 @@
-@import '../../../styles.css';
+@import "../../../styles.css";
 
 .text-primary {
-    color: var(--primary);
+  color: var(--primary);
 }
 
-.border-btn{
-    border:1px solid var(--primary);
+.border-btn {
+  border: 1px solid var(--primary);
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif !important;
 }
