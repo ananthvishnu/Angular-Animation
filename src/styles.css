@@ -137,3 +137,27 @@ h6,
   color: var(--dark);
 }
 /*** Button End ***/
+
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gainsboro;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  /* box-shadow: 15px 15px 25px #ff0000a4; */
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
