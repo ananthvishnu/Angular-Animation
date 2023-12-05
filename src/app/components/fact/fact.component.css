@@ -17,4 +17,6 @@
 
 .bg-primary {
   background-color: var(--primary) !important;
+  font-family: "Open Sans", sans-serif !important;
+
 }

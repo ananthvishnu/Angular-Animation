@@ -1,0 +1,29 @@
+@import "../../../styles.css";
+
+.menu .nav-item a.active {
+  background: var(--primary) !important;
+}
+
+.menu .menu-item .border-bottom {
+  border-bottom-style: dashed !important;
+}
+
+.border-btn {
+  border: 1px solid var(--primary);
+}
+.open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+    font-family: "Open Sans", sans-serif !important;
+    color: #9a9a9a;
+  }
+
+.border-primary {
+  border-bottom: 1px solid var(--primary) !important;
+}

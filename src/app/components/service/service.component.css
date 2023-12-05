@@ -1,0 +1,69 @@
+@import "../../../styles.css";
+
+.text-primary {
+  color: var(--primary);
+}
+.border-btn {
+  border: 1px solid var(--primary);
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+p {
+  font-family: "Open Sans", sans-serif !important;
+  color: #9a9a9a;
+}
+
+.service .service-item {
+  position: relative;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+}
+
+.service-content::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  background: var(--primary);
+  border-radius: 8px;
+  transition: 1s;
+}
+
+.service-item:hover .service-content::after {
+  height: 100%;
+  opacity: 1;
+}
+
+.service-item .service-content-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.service-item .service-content-icon i,
+.service-item .service-content-icon p {
+  transition: 1s;
+}
+
+.service-item:hover .service-content-icon i {
+  color: var(--dark) !important;
+}
+
+.service-item:hover .service-content-icon p {
+  color: var(--white) !important;
+}
+
+.service-item:hover .service-content-icon a.btn-primary {
+  background: var(--white) !important;
+  color: var(--dark) !important;
+}
+
+.service-item .service-content-icon a.btn-primary {
+  transition: 1s !important;
+}

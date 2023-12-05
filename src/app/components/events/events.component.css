@@ -1,0 +1,31 @@
+@import "../../../styles.css";
+
+.event .tab-class .nav-item a.active {
+  background: var(--primary) !important;
+}
+.border-btn {
+  border: 1px solid var(--primary);
+}
+.open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+.event .event-img .event-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(212, 167, 98, 0.7);
+  border-radius: 8px;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.event .event-img:hover .event-overlay {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+}
