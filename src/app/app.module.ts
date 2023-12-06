@@ -19,6 +19,8 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcrumComponent } from './components/breadcrum/breadcrum.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ErrorComponent } from './components/error/error.component';
 
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ServicesPageComponent } from './pages/services-page/services-page.component';
@@ -47,6 +49,8 @@ import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-p
     TeamComponent,
     TestimonialComponent,
     BlogsComponent,
+    ContactComponent,
+    ErrorComponent,
     FooterComponent,
     BreadcrumComponent,
     AboutPageComponent,

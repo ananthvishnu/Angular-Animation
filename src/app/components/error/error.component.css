@@ -1,0 +1,17 @@
+@import "../../../styles.css";
+
+.contact-form {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+}
+.open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.form-control {
+  font-family: "Open Sans", sans-serif !important;
+  color: #9a9a9a;
+}
+
+.border-primary {
+  border: 1px solid var(--primary) !important;
+}
