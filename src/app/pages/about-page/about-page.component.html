@@ -1,5 +1,12 @@
 <app-navbar></app-navbar>
-<app-breadcrum></app-breadcrum>
+  <app-breadcrum
+  [pageTitle]="['About Us']"
+  [homeLink]="['']"
+  [homeText]="['Home']"
+  [pagesLink]="['/about']"
+  [pagesText]="['Pages']"
+  [currentText]="['About']"
+></app-breadcrum>
 <app-about-us></app-about-us>
 <app-fact></app-fact>
 <app-team></app-team>
