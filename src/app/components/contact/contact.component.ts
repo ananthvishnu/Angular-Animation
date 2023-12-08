@@ -57,7 +57,7 @@ export class ContactComponent implements OnInit {
           }
         );
 
-        this.toaster.success({
+        this.toaster.warning({
           detail: 'SUCCESS',
           summary: 'Message has been sent successfully',
           duration: 5000,
