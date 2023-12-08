@@ -17,6 +17,8 @@ import { NgToastService } from 'ng-angular-popup';
 export class ContactComponent implements OnInit {
   contactForm: FormGroup | any;
   submitted: boolean = false;
+  isLoading: boolean = false;
+
 
   ngOnInit(): void {
     this.initialForm();
@@ -44,6 +46,7 @@ export class ContactComponent implements OnInit {
   }
 
   async send() {
+    this.isLoading = true;
     if (this.contactForm.valid) {
       try {
         let response = await emailjs.send(
@@ -56,15 +59,18 @@ export class ContactComponent implements OnInit {
             from_message: this.contactForm.value.from_message,
           }
         );
-
         this.toaster.warning({
           detail: 'SUCCESS',
           summary: 'Message has been sent successfully',
           duration: 5000,
           position: 'topRight',
         });
+        this.isLoading = false;
+        this.submitted = false;
         this.contactForm.reset();
       } catch (error) {
+        this.isLoading = false;
+        this.submitted = false;
         this.toaster.error({
           detail: 'SUCCESS',
           summary: 'Error sending email. Please try again.',
@@ -74,6 +80,7 @@ export class ContactComponent implements OnInit {
       }
     }else{
       this.submitted = true;
+      this.isLoading = false;
     }
   }
 }

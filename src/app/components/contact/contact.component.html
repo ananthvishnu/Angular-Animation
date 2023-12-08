@@ -62,7 +62,13 @@
                     </div>
 
 
-                        <button class="custom-outline w-100 btn btn-primary form-control p-3 text-dark rounded-pill" type="submit">Submit Now</button>
+                        <button *ngIf="!isLoading"class="custom-outline w-100 btn btn-primary form-control p-3 text-dark rounded-pill" type="submit">Submit Now</button>
+
+                        <button *ngIf="isLoading" class="custom-outline w-100 btn btn-primary form-control p-3 text-dark rounded-pill">
+                            <div class="spinner-border text-light" role="status" style="height: 20px; width: 20px;">
+                                <span class="sr-only">Loading...</span>
+                              </div>
+                        </button>
                     </form>
                 </div>
                 <div class="col-md-6 col-lg-5">
