@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { NgToastModule } from 'ng-angular-popup' // to be added
 
 
 import { AppComponent } from './app.component';
@@ -68,6 +70,10 @@ import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-p
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NgToastModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

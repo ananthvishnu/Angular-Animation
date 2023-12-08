@@ -8,11 +8,61 @@
                 </div>
                 <div class="col-md-6 col-lg-7">
                     <p class="mb-4 open-sans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga tempore ducimus voluptatem. Illum libero aspernatur quis nesciunt. Architecto, a laboriosam!</p>
-                    <form>
-                        <input type="text" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Your Name">
-                        <input type="email" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Enter Your Email">
-                        <textarea class="w-100 form-control mb-4 p-3 border-primary bg-light" rows="4" cols="10" placeholder="Your Message"></textarea>
-                        <button class="w-100 btn btn-primary form-control p-3 text-dark rounded-pill" type="submit">Submit Now</button>
+                    <form action="javascript:void(0)" [formGroup]="contactForm" (ngSubmit)="send()">
+                        <div class="input-div">
+                            <input type="text" formControlName="from_name" class="custom-outline w-100 form-control p-3 border-primary bg-light" placeholder="Your Name">
+                            <span
+                            *ngIf="submitted && f['from_name'].errors"
+                            class="validation-error"
+                          >
+                            <span
+                              class="validation-error"
+                              *ngIf="f['from_name'].errors['required']"
+                            >
+                              Name is required!
+                            </span>
+                          </span>
+                        </div>
+
+
+                       <div class="input-div">
+                        <input type="email" formControlName="from_email" class="custom-outline w-100 form-control p-3 border-primary bg-light" placeholder="Enter Your Email">
+                        <span
+                        *ngIf="submitted && f['from_email'].errors"
+                        class="validation-error"
+                      >
+                        <span
+                          class="validation-error"
+                          *ngIf="f['from_email'].errors['required']"
+                        >
+                          Email is required!
+                        </span>
+                        <span
+                        class="validation-error"
+                        *ngIf="f['from_email'].errors['email']"
+                      >
+                        Enter valid email!
+                      </span>
+                      </span>
+                       </div>
+
+                    <div class="text-div">
+                        <textarea formControlName="from_message" class="custom-outline w-100 form-control  p-3 border-primary bg-light" rows="4" cols="10" placeholder="Your Message"></textarea>
+                        <span
+                        *ngIf="submitted && f['from_message'].errors"
+                        class="validation-error"
+                      >
+                        <span
+                          class="validation-error"
+                          *ngIf="f['from_message'].errors['required']"
+                        >
+                          Message is required!
+                        </span>
+                      </span>
+                    </div>
+
+
+                        <button class="custom-outline w-100 btn btn-primary form-control p-3 text-dark rounded-pill" type="submit">Submit Now</button>
                     </form>
                 </div>
                 <div class="col-md-6 col-lg-5">
