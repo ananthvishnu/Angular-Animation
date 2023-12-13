@@ -11,6 +11,7 @@ a {
 .custom-outline:focus {
   outline-color: var(--primary);
   box-shadow: 0 0 0 2px var(--primary);
+  background-color: transparent !important;
 }
 
 .validation-error {
@@ -21,4 +22,16 @@ a {
 
 .input-div {
   height: 20px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 13px;
+  top: 4px;
+  cursor: pointer;
+  font-size: 20px;
 }

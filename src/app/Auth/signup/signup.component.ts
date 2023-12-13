@@ -21,6 +21,11 @@ export class SignupComponent implements OnInit {
   signupForm: FormGroup | any;
   submitted: boolean = false;
   isLoading: boolean = false;
+  visible: boolean = true;
+  changetype: boolean = true;
+
+  visible1: boolean = true;
+  changetype1: boolean = true;
 
   constructor(
     private fb: FormBuilder,
@@ -34,16 +39,27 @@ export class SignupComponent implements OnInit {
     this.initialForm();
   }
 
+  viewpass() {
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+  }
+
+  viewpass1() {
+    this.visible1 = !this.visible1;
+    this.changetype1 = !this.changetype1;
+  }
+
   initialForm() {
-    this.signupForm = this.fb.group({
-      username: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required]),
-      confirmPassword: new FormControl('',[Validators.required])
-    },
-    {
-      validators: [Validation.match('password', 'confirmPassword')],
-    }
+    this.signupForm = this.fb.group(
+      {
+        username: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        password: new FormControl('', [Validators.required]),
+        confirmPassword: new FormControl('', [Validators.required]),
+      },
+      {
+        validators: [Validation.match('password', 'confirmPassword')],
+      }
     );
   }
 

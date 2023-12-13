@@ -21,6 +21,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup | any;
   submitted: boolean = false;
   isLoading: boolean = false;
+  visible: boolean = true;
+  changetype: boolean = true;
 
   constructor(
     private fb: FormBuilder,
@@ -32,6 +34,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initialForm();
+  }
+
+  viewpass() {
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
   }
 
   initialForm() {

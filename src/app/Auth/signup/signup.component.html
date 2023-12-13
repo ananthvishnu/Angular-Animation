@@ -133,14 +133,19 @@
                     </svg>
                   </span>
                   <input
-                    type="password"
-                    class="custom-outline form-control"
+                  [type]="changetype ? 'password' : 'text'"
+                  class="custom-outline form-control"
                     name="password"
                     id="password"
                     value=""
                     formControlName="password"
                     required
                   />
+                  <span class="eye" style="cursor: pointer;" (click)="viewpass()"
+                  ><i
+                    [ngClass]="visible ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill '"
+                  ></i>
+                </span>
                 </div>
               </div>
               <div class="input-div" style="margin: 0">
@@ -178,7 +183,7 @@
                     </svg>
                   </span>
                   <input
-                    type="password"
+                  [type]="changetype1 ? 'password' : 'text'"
                     class="custom-outline form-control"
                     name="confirmPassword"
                     id="confirmPassword"
@@ -186,6 +191,11 @@
                     formControlName="confirmPassword"
                     required
                   />
+                  <span class="eye" style="cursor: pointer;" (click)="viewpass1()"
+                  ><i
+                    [ngClass]="visible1 ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill '"
+                  ></i>
+                </span>
                 </div>
               </div>
 
