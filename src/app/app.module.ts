@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 
 
 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -42,6 +43,7 @@ import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-p
 import { LoginComponent } from './Auth/login/login.component';
 import { SignupComponent } from './Auth/signup/signup.component';
 import { authInterceptor } from './interceptor/auth.interceptor';
+import { GooglemapComponent } from './components/googlemap/googlemap.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,8 @@ import { authInterceptor } from './interceptor/auth.interceptor';
     TeamPageComponent,
     TestimonialPageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    GooglemapComponent
 
   ],
   imports: [
