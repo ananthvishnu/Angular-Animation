@@ -46,7 +46,9 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.http
+    this.isLoading = true;
+    if(this.loginForm.valid){
+      this.http
       .post<{ user: UserInterface }>(
         'https://api.realworld.io/api/users/login',
         {
@@ -78,5 +80,9 @@ export class LoginComponent implements OnInit {
           });
         }
       );
+    } else {
+      this.submitted = true;
+      this.isLoading = false;
+    }
   }
 }

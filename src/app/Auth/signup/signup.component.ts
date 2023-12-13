@@ -47,30 +47,40 @@ export class SignupComponent implements OnInit {
   }
 
   signup() {
-    this.http
-      .post<{ user: UserInterface }>('https://api.realworld.io/api/users', {
-        user: this.signupForm.getRawValue(),
-      })
-      .subscribe(
-        (response) => {
-          this.toaster.warning({
-            detail: 'SUCCESS',
-            summary: 'Signup successfully',
-            duration: 5000,
-            position: 'topRight',
-          });
-          localStorage.setItem('token', response.user.token);
-          this.authService.CurrentUserSig.set(response.user);
-          this.router.navigateByUrl('/home');
-        },
-        (error) => {
-          this.toaster.error({
-            detail: 'ERROR',
-            summary: 'Failed to signup. Please try again.',
-            sticky: true,
-            position: 'topRight',
-          });
-        }
-      );
+    this.isLoading = true;
+    if (this.signupForm.valid) {
+      this.http
+        .post<{ user: UserInterface }>('https://api.realworld.io/api/users', {
+          user: this.signupForm.getRawValue(),
+        })
+        .subscribe(
+          (response) => {
+            this.toaster.warning({
+              detail: 'SUCCESS',
+              summary: 'Signup successfully',
+              duration: 5000,
+              position: 'topRight',
+            });
+            this.isLoading = false;
+            this.submitted = false;
+            localStorage.setItem('token', response.user.token);
+            this.authService.CurrentUserSig.set(response.user);
+            this.router.navigateByUrl('/home');
+          },
+          (error) => {
+            this.isLoading = false;
+            this.submitted = false;
+            this.toaster.error({
+              detail: 'ERROR',
+              summary: 'Failed to signup. Please try again.',
+              sticky: true,
+              position: 'topRight',
+            });
+          }
+        );
+    } else {
+      this.isLoading = false;
+      this.submitted = true;
+    }
   }
 }
