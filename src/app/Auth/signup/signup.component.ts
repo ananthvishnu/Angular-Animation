@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { UserInterface } from 'src/app/interface/user.interface';
 import { AuthServiceTsService } from 'src/app/shared/auth.service.ts.service';
-
+import Validation from '../../validations/password.valiation';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -39,7 +39,12 @@ export class SignupComponent implements OnInit {
       username: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required]),
-    });
+      confirmPassword: new FormControl('',[Validators.required])
+    },
+    {
+      validators: [Validation.match('password', 'confirmPassword')],
+    }
+    );
   }
 
   get f(): { [key: string]: AbstractControl } {
