@@ -18,6 +18,8 @@ a {
   font-size: 12px;
   color: red;
   font-weight: 400;
+  font-family: "Open Sans", sans-serif !important;
+
 }
 
 .input-div {
@@ -34,3 +36,13 @@ a {
   cursor: pointer;
   font-size: 20px;
 }
+
+.sign-text{
+  color: var(--primary);
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.open{
+  font-family: "Open Sans", sans-serif !important;
+}
+

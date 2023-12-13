@@ -23,7 +23,7 @@
           >
             <div class="row gy-3 gy-md-4 overflow-hidden">
               <div class="col-12">
-                <label for="email" class="form-label"
+                <label for="email" class="form-label open"
                   >Username<span class="text-danger">*</span></label
                 >
                 <div class="input-group">
@@ -65,7 +65,7 @@
                 </span>
               </div>
               <div class="col-12">
-                <label for="email" class="form-label"
+                <label for="email" class="form-label open"
                   >Email <span class="text-danger">*</span></label
                 >
                 <div class="input-group">
@@ -113,7 +113,7 @@
                 </span>
               </div>
               <div class="col-12">
-                <label for="password" class="form-label"
+                <label for="password" class="form-label open"
                   >Password <span class="text-danger">*</span></label
                 >
                 <div class="input-group">
@@ -163,7 +163,7 @@
               </div>
 
               <div class="col-12">
-                <label for="password" class="form-label"
+                <label for="password" class="form-label open"
                   >Confirm Password <span class="text-danger">*</span></label
                 >
                 <div class="input-group">
@@ -223,7 +223,7 @@
                 <div class="d-grid">
                   <button
                     *ngIf="!isLoading"
-                    class="btn btn-primary btn-lg text-dark"
+                    class="btn btn-primary btn-lg text-dark open"
                     type="submit"
                   >
                     Signup
@@ -253,10 +253,10 @@
               >
                 <a
                   [routerLink]="['/login']"
-                  class="link-secondary text-decoration-none"
-                  >Already have account</a
+                  class="link-secondary text-decoration-none open"
+                  >Already have account :  <span class="login-text open">Login</span> </a
                 >
-                <a href="#!" class="link-secondary text-decoration-none"
+                <a href="#!" class="link-secondary text-decoration-none open"
                   >Forgot password</a
                 >
               </div>
