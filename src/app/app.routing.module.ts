@@ -13,11 +13,17 @@ import { BookingPageComponent } from './pages/booking-page/booking-page.componen
 import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { TeamPageComponent } from './pages/team-page/team-page.component';
 import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-page.component';
+import { LoginComponent } from './Auth/login/login.component';
+import { SignupComponent } from './Auth/signup/signup.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component:LoginComponent  },
+  { path: 'signup', component:SignupComponent  },
+
+
 
   { path: 'about', component: AboutPageComponent },
   { path: 'service', component: ServicesPageComponent },

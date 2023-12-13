@@ -3,7 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
-import { NgToastModule } from 'ng-angular-popup' // to be added
+import { NgToastModule } from 'ng-angular-popup' 
+import {  HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+
 
 
 import { AppComponent } from './app.component';
@@ -35,6 +39,9 @@ import { BookingPageComponent } from './pages/booking-page/booking-page.componen
 import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { TeamPageComponent } from './pages/team-page/team-page.component';
 import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-page.component';
+import { LoginComponent } from './Auth/login/login.component';
+import { SignupComponent } from './Auth/signup/signup.component';
+import { authInterceptor } from './interceptor/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -64,7 +71,10 @@ import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-p
     BookingPageComponent,
     BlogPageComponent,
     TeamPageComponent,
-    TestimonialPageComponent
+    TestimonialPageComponent,
+    LoginComponent,
+    SignupComponent
+
   ],
   imports: [
     BrowserModule,
@@ -72,10 +82,15 @@ import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-p
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    NgToastModule
+    NgToastModule,
+    HttpClientModule,
+    CommonModule
+
 
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptors([authInterceptor]))
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
