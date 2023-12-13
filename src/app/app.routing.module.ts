@@ -16,6 +16,7 @@ import { TestimonialPageComponent } from './pages/testimonial-page/testimonial-p
 import { LoginComponent } from './Auth/login/login.component';
 import { SignupComponent } from './Auth/signup/signup.component';
 import { GooglemapComponent } from './components/googlemap/googlemap.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component:LoginComponent  },
   { path: 'signup', component:SignupComponent  },
+  { path: 'profile', component:ProfilePageComponent  },
   { path: 'map', component:GooglemapComponent  },
 
 

@@ -44,6 +44,8 @@ import { LoginComponent } from './Auth/login/login.component';
 import { SignupComponent } from './Auth/signup/signup.component';
 import { authInterceptor } from './interceptor/auth.interceptor';
 import { GooglemapComponent } from './components/googlemap/googlemap.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { GooglemapComponent } from './components/googlemap/googlemap.component';
     TestimonialPageComponent,
     LoginComponent,
     SignupComponent,
-    GooglemapComponent
+    GooglemapComponent,
+    UserProfileComponent,
+    ProfilePageComponent
 
   ],
   imports: [

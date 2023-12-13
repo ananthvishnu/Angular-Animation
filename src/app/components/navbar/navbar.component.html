@@ -34,7 +34,10 @@
                 <a *ngIf="authService.CurrentUserSig() === null" [routerLink]="['/login']" class="open-sans btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Login</a>
                 <a *ngIf="authService.CurrentUserSig()" (click)="logout()" class="open-sans btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Logout</a>&nbsp; &nbsp;
                 <h1 class="text-primary fw-bold mb-0">{{authService.CurrentUserSig()?.username}}</h1> &nbsp; &nbsp;
-                <img *ngIf="authService.CurrentUserSig()" [src]="userData.user.image" alt="" class="profile" style="height: 40px; width: 40px; border-radius: 50%; border: 4px solid var(--primary);">
+                <a [routerLink]="['/profile']">
+                    <img *ngIf="authService.CurrentUserSig()" [src]="userData.user.image" alt="" class="profile" style="height: 40px; width: 40px; border-radius: 50%; border: 4px solid var(--primary);">
+                </a>
+                
 
             </div>
         </nav>
