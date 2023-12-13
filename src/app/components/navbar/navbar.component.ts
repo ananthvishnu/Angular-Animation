@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserInterface } from 'src/app/interface/user.interface';
 import { AuthServiceTsService } from 'src/app/shared/auth.service.ts.service';
 
@@ -11,7 +12,8 @@ import { AuthServiceTsService } from 'src/app/shared/auth.service.ts.service';
 export class NavbarComponent implements OnInit {
   constructor(
     public authService: AuthServiceTsService,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -26,5 +28,6 @@ export class NavbarComponent implements OnInit {
   logout() {
     localStorage.setItem('token','');
     this.authService.CurrentUserSig.set(null);
+    this.router.navigateByUrl('/login')
   }
 }
