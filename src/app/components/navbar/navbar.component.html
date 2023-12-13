@@ -14,6 +14,7 @@
                     <a [routerLink]="['/service']" class="nav-item nav-link">Services</a>
                     <a [routerLink]="['/events']" class="nav-item nav-link">Events</a>
                     <a [routerLink]="['/menu']" class="nav-item nav-link">Menu</a>
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu bg-light">
@@ -25,6 +26,9 @@
                         </div>
                     </div>
                     <a [routerLink]="['/contact']" class="nav-item nav-link">Contact</a>
+                    <a *ngIf="authService.CurrentUserSig() === null" [routerLink]="['/login']" class="log nav-item nav-link">Login</a>
+                    <a *ngIf="authService.CurrentUserSig()" [routerLink]="['/login']" class="log nav-item nav-link">Logout</a>
+
                 </div>
                 <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
                 <a *ngIf="authService.CurrentUserSig() === null" [routerLink]="['/login']" class="open-sans btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Login</a>
