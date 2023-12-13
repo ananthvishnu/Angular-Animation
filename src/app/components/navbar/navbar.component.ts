@@ -10,6 +10,7 @@ import { AuthServiceTsService } from 'src/app/shared/auth.service.ts.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+  userData:any
   constructor(
     public authService: AuthServiceTsService,
     private http: HttpClient,
@@ -21,6 +22,7 @@ export class NavbarComponent implements OnInit {
       .get<{ user: UserInterface }>('https://api.realworld.io/api/user')
       .subscribe({
         next: (response) => {
+          this.userData = response
           console.log('response', response);
           this.authService.CurrentUserSig.set(response.user);
         },

@@ -33,7 +33,8 @@
                 <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
                 <a *ngIf="authService.CurrentUserSig() === null" [routerLink]="['/login']" class="open-sans btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Login</a>
                 <a *ngIf="authService.CurrentUserSig()" (click)="logout()" class="open-sans btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Logout</a>&nbsp; &nbsp;
-                <h1 class="text-primary fw-bold mb-0">{{authService.CurrentUserSig()?.username}}</h1>
+                <h1 class="text-primary fw-bold mb-0">{{authService.CurrentUserSig()?.username}}</h1> &nbsp; &nbsp;
+                <img *ngIf="authService.CurrentUserSig()" [src]="userData.user.image" alt="" class="profile" style="height: 40px; width: 40px; border-radius: 50%; border: 4px solid var(--primary);">
 
             </div>
         </nav>
