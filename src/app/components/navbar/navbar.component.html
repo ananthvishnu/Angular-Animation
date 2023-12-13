@@ -1,7 +1,7 @@
 <div class="container-fluid nav-bar">
     <div class="container">
         <nav class="navbar navbar-light navbar-expand-lg py-4">
-            <a href="index.html" class="navbar-brand">
+            <a [routerLink]="['/home']" class="navbar-brand">
                 <h1 class="text-primary fw-bold mb-0">Cater<span class="text-dark">Serv</span> </h1>
             </a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -28,8 +28,9 @@
                 </div>
                 <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
                 <a *ngIf="authService.CurrentUserSig() === null" [routerLink]="['/login']" class="open-sans btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Login</a>
-                <a *ngIf="authService.CurrentUserSig()" (click)="logout()" class="open-sans btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Logout</a>
-                <p>{{authService.CurrentUserSig()?.username}}</p>
+                <a *ngIf="authService.CurrentUserSig()" (click)="logout()" class="open-sans btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Logout</a>&nbsp; &nbsp;
+                <h1 class="text-primary fw-bold mb-0">{{authService.CurrentUserSig()?.username}}</h1>
+
             </div>
         </nav>
     </div>

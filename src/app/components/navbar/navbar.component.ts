@@ -19,11 +19,20 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.http
       .get<{ user: UserInterface }>('https://api.realworld.io/api/user')
-      .subscribe((response) => {
-        console.log('response', response);
-        this.authService.CurrentUserSig.set(response.user);
+      .subscribe({
+        next: (response) => {
+          console.log('response', response);
+          this.authService.CurrentUserSig.set(response.user);
+        },
+        error: () => {
+          this.authService.CurrentUserSig.set(null);
+        }
       });
   }
+
+
+
+
 
   logout() {
     localStorage.setItem('token','');
