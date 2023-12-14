@@ -46,6 +46,8 @@ import { authInterceptor } from './interceptor/auth.interceptor';
 import { GooglemapComponent } from './components/googlemap/googlemap.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import {CloudinaryModule} from '@cloudinary/ng';
+
 
 @NgModule({
   declarations: [
@@ -91,7 +93,8 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     FormsModule,
     NgToastModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    CloudinaryModule
 
 
   ],
